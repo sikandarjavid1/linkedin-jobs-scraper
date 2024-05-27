@@ -15,12 +15,10 @@ Run main.py to initiate the job scraping process and everything else will be cat
 
 ## Requirements
 
-- Python
-- Pandas
-- Selenium
-- BeautifulSoup
-- Lxml
-- ChromeDriver (ensure it is in the system PATH or provide the path in the script i.e. line 15 in job_scrapper.py and line 19 in helper.py)
+## Requirements
+Install Requirements using below command 
+
+pip install -r requirements.txt
 
 **Note:** Don't forget to add credentials in line 16 and 17 in job_scrapper.py.
 
