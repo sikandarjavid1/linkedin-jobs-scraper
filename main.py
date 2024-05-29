@@ -29,8 +29,8 @@ url1=f'https://www.linkedin.com/jobs/search?keywords={keywords_encoded}&location
 url= 'https://www.linkedin.com/uas/login'
 # job_info=find_profiles(url1)
 # job_info.to_csv('sample_testing.csv')
-linkedin_username = 'sikandar.javid@outlook.com'
-linkedin_password = 'etc9uvk_'
+linkedin_username = ''
+linkedin_password = ''
 options = Options()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
