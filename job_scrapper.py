@@ -8,26 +8,30 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import TimeoutException
 
 
-def login():
-    options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")
-    options.add_argument ("start -maximized")
-    browser= webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
-    #Add Linkedin Cred
-    your_email=''
-    your_password=''
-    try:
-        browser. get( "https://www.linkedin.com/uas/login")
-        elementID = browser.find_element('id', 'username')
-        elementID.send_keys(your_email)
-        elementID = browser.find_element('id', 'password' )
-        elementID.send_keys(your_password)
-        elementID.submit()
-        return browser
-    except Exception as e:
-        raise Exception("Can't able to login")
+# def login():
+#     options = webdriver.ChromeOptions()
+#     # options.add_argument("--headless")
+#     options.add_argument ("start -maximized")
+#     browser= webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
+#     #Add Linkedin Cred
+#     your_email='sikandar.javid@outlook.com'
+#     your_password='etc9uvk_'
+#     try:
+#         browser. get( "https://www.linkedin.com/uas/login")
+#         elementID = browser.find_element('id', 'username')
+#         elementID.send_keys(your_email)
+#         elementID = browser.find_element('id', 'password' )
+#         elementID.send_keys(your_password)
+#         elementID.submit()
+       
+        
+    
+#         return browser
+#     except Exception as e:
+#         raise Exception("Can't able to login")
     
 def ensure_empty_directory(directory_path):
     if os.path.exists(directory_path):  # Check if directory exists
